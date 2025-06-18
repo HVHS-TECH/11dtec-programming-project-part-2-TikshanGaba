@@ -18,7 +18,7 @@ Main Code
 userName ();
 userAge ();
 userMoney ();
-const MINAGE = 0;
+const MINAGE = 18;
 const MAXAGE = 100;
 /**************************** 
 Functions
