@@ -27,6 +27,7 @@ const MAXAGE = 100;
 Functions
 ****************************/
  function start()
- { 
-   <input type="text" id="input_name" required></input>
- }
+{
+   <input type="text" id="input_name" required></input>}
+   {
+   <input type = "number" id= "input_age" min={ MINAGE} max={MAXAGE} ></input>}
