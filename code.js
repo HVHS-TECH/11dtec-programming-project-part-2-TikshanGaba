@@ -18,6 +18,9 @@ Main Code
 userName ();
 userAge ();
 userMoney ();
+Seats ();
+const MINSEATS = 1;
+const MAXSEATS = 8
 const MINAGE = 18;
 const MAXAGE = 100;
 /**************************** 
@@ -37,6 +40,17 @@ Functions
    userAge = prompt("Nice name " + userName +" How old are you ?")
  if (userAge == null || userAge == "" || userAge == " " || isNaN(userAge) || userAge < MINAGE || userAge > MAXAGE){
     userAge = prompt("Invalid! You must enter you age between " + MINAGE + " and " + MAXAGE)
+    if (userAge == null){
+   // end the program
+   return;
  }
- 
+}
+Seats = prompt("How much seats do you require in your car ?")
+ if (Seats == null || Seats == "" || Seats == " " || isNaN(Seats) || Seats < MINSEATS || Seats > MAXSEATS){
+  Seats = prompt("Invalid! You must enter seats between" + MINSEATS + " and " + MAXSEATS)
+  if (Seats == null){
+    // end the program
+    return;
+  }
+ }
 }
