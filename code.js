@@ -2,17 +2,17 @@
     {
       name: "Toyota Corolla",
       pricePerDay: 40,
-      image: "https://upload.wikimedia.org/wikipedia/commons/2/28/2021_Toyota_Corolla_Icon_Tech_VVT-i_HEV_CVT_1.8_Front.jpg"
+      image: "Toyota.jpeg"
     },
     {
       name: "Honda Civic",
       pricePerDay: 45,
-      image: "https://upload.wikimedia.org/wikipedia/commons/2/23/2022_Honda_Civic_Sport_front_view.jpg"
+      image: "Civic.jpeg"
     },
     {
       name: "BMW 3 Series",
       pricePerDay: 80,
-      image: "https://upload.wikimedia.org/wikipedia/commons/4/44/BMW_G20_IMG_2586.jpg"
+      image: "BM.jpeg"
     }
   ];
 
