@@ -3,7 +3,7 @@ const cars = [
         type: "Toyota Camry",
         rate: 40,
         seats: 5,
-        image: "https://upload.wikimedia.org/wikipedia/commons/0/05/2021_Toyota_Camry_SE.jpg"
+        image: "Toyota.jpeg"
       },
       {
         type: "Honda CR-V",
