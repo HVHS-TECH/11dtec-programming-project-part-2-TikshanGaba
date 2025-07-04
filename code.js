@@ -18,10 +18,10 @@ const cars = [
         image: "https://upload.wikimedia.org/wikipedia/commons/2/2c/2018_Ford_Focus_ST-Line_EcoBoost_1.0.jpg"
       },
       {
-        type: "Mazda MX-5",
+        type: "BMW M4",
         rate: 60,
         seats: 2,
-        image: "https://upload.wikimedia.org/wikipedia/commons/3/37/2019_Mazda_MX-5_Miata_RF_GT-S_front_5.21.20.jpg"
+        image: "bmw-m4-cs-flyout.webp"
       },
       {
         type: "Ford F-150",
