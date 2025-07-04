@@ -6,16 +6,16 @@ const cars = [
         image: "Toyota.jpeg"
       },
       {
-        type: "Honda CR-V",
+        type: "Honda Civic",
         rate: 50,
         seats: 5,
-        image: "https://upload.wikimedia.org/wikipedia/commons/f/fb/2020_Honda_CR-V_SR_VTEC_CVT_1.5_Front.jpg"
+        image: "Civic.jpeg"
       },
       {
         type: "Ford Focus",
         rate: 35,
         seats: 4,
-        image: "https://upload.wikimedia.org/wikipedia/commons/2/2c/2018_Ford_Focus_ST-Line_EcoBoost_1.0.jpg"
+        image: "focus.jpeg"
       },
       {
         type: "BMW M4",
@@ -27,7 +27,7 @@ const cars = [
         type: "Ford F-150",
         rate: 55,
         seats: 5,
-        image: "https://upload.wikimedia.org/wikipedia/commons/e/ef/2018_Ford_F-150_XLT_SuperCrew_4x4.jpg"
+        image: "F-150.jpeg"
       }
     ];
 
