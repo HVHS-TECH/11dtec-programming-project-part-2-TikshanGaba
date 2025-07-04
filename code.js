@@ -3,31 +3,25 @@ const cars = [
         type: "Toyota Camry",
         rate: 40,
         seats: 5,
-        image: "https://upload.wikimedia.org/wikipedia/commons/0/05/2021_Toyota_Camry_SE.jpg"
-      },
-      {
-        type: "Honda CR-V",
-        rate: 50,
-        seats: 5,
-        image: "https://upload.wikimedia.org/wikipedia/commons/f/fb/2020_Honda_CR-V_SR_VTEC_CVT_1.5_Front.jpg"
+        image: "Toyota.jpeg"
       },
       {
         type: "Ford Focus",
         rate: 35,
         seats: 4,
-        image: "https://upload.wikimedia.org/wikipedia/commons/2/2c/2018_Ford_Focus_ST-Line_EcoBoost_1.0.jpg"
+        image: "focus.jpeg"
       },
       {
-        type: "Mazda MX-5",
+        type: "BMW M4",
         rate: 60,
         seats: 2,
-        image: "https://upload.wikimedia.org/wikipedia/commons/3/37/2019_Mazda_MX-5_Miata_RF_GT-S_front_5.21.20.jpg"
+        image: "bmw-m4-cs-flyout.webp"
       },
       {
         type: "Ford F-150",
         rate: 55,
         seats: 5,
-        image: "https://upload.wikimedia.org/wikipedia/commons/e/ef/2018_Ford_F-150_XLT_SuperCrew_4x4.jpg"
+        image: "F-150.jpeg"
       }
     ];
 
