@@ -1,70 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Car Rental Service</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f4f4f4;
+      background: linear-gradient(to right, #cce3ff, #e6ffe6);
+      margin: 0;
+      padding: 0;
     }
-
-    header {
-      background-color: #333;
-      color: white;
-      padding: 10px;
-      text-align: center;
-    }
-
     .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #ffffff;
       padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     }
-
-    .car-card {
-      background-color: white;
-      border-radius: 8px;
-      margin: 10px;
-      padding: 20px;
-      width: 300px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    h1 {
+      text-align: center;
+      color: #004085;
     }
-
-    .car-card img {
+    label, select, input {
+      display: block;
       width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 6px;
-    }
-
-    .car-card h3 {
       margin-top: 10px;
-    }
-
-    .car-card input, .car-card button {
-      margin: 5px 0;
       padding: 8px;
-      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
     }
-
-    .price-output {
-      margin-top: 10px;
+    button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
       font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .summary p {
+      margin: 8px 0;
+    }
+    .car-image {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-top: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
+  <script src="code.js"></script>
+  <div class="container">
+    <h1>QuickRide Rentals</h1>
+    <label for="carSelect">Select a Car:</label>
+    <select id="carSelect"></select>
 
-<header>
-  <h1>Car Rental Service</h1>
-</header>
+    <label for="rentalDays">Rental Duration (days):</label>
+    <input type="number" id="rentalDays" value="1" min="1" />
 
-<div class="container" id="car-list">
-  <!-- Car cards injected by JavaScript -->
-</div>
-<script src="code.js"></script>
+    <label for="paymentMethod">Payment Method:</label>
+    <select id="paymentMethod">
+      <option value="Card">Card</option>
+      <option value="Cash">Cash</option>
+    </select>
+
+    <button onclick="showSummary()">Show Summary</button>
+
+    <div class="summary" id="summary"></div>
+  </div>
 </body>
 </html>

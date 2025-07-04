@@ -1,56 +1,62 @@
- const cars = [
-    {
-      name: "Toyota Corolla",
-      pricePerDay: 40,
-      image: "Toyota.jpeg"
-    },
-    {
-      name: "Honda Civic",
-      pricePerDay: 45,
-      image: "Civic.jpeg"
-    },
-    {
-      name: "BMW 3 Series",
-      pricePerDay: 80,
-      image: "BM.jpeg"
+const cars = [
+      {
+        type: "Toyota Camry",
+        rate: 40,
+        seats: 5,
+        image: "https://upload.wikimedia.org/wikipedia/commons/0/05/2021_Toyota_Camry_SE.jpg"
+      },
+      {
+        type: "Honda CR-V",
+        rate: 50,
+        seats: 5,
+        image: "https://upload.wikimedia.org/wikipedia/commons/f/fb/2020_Honda_CR-V_SR_VTEC_CVT_1.5_Front.jpg"
+      },
+      {
+        type: "Ford Focus",
+        rate: 35,
+        seats: 4,
+        image: "https://upload.wikimedia.org/wikipedia/commons/2/2c/2018_Ford_Focus_ST-Line_EcoBoost_1.0.jpg"
+      },
+      {
+        type: "Mazda MX-5",
+        rate: 60,
+        seats: 2,
+        image: "https://upload.wikimedia.org/wikipedia/commons/3/37/2019_Mazda_MX-5_Miata_RF_GT-S_front_5.21.20.jpg"
+      },
+      {
+        type: "Ford F-150",
+        rate: 55,
+        seats: 5,
+        image: "https://upload.wikimedia.org/wikipedia/commons/e/ef/2018_Ford_F-150_XLT_SuperCrew_4x4.jpg"
+      }
+    ];
+
+    const carSelect = document.getElementById("carSelect");
+    cars.forEach((car, index) => {
+      const option = document.createElement("option");
+      option.value = index;
+      option.textContent = `${car.type} - $${car.rate}/day`;
+      carSelect.appendChild(option);
+    });
+
+    function showSummary() {
+      const selectedIndex = carSelect.value;
+      const rentalDays = parseInt(document.getElementById("rentalDays").value);
+      const paymentMethod = document.getElementById("paymentMethod").value;
+
+      const car = cars[selectedIndex];
+      const estimatedCost = rentalDays * car.rate;
+
+      const summaryHTML = `
+        <p><strong>Car Type:</strong> ${car.type}</p>
+        <p><strong>Seats:</strong> ${car.seats}</p>
+        <p><strong>Rental Duration:</strong> ${rentalDays} day(s)</p>
+        <p><strong>Payment Method:</strong> ${paymentMethod}</p>
+        <p><strong>Daily Rate:</strong> $${car.rate}</p>
+        <p><strong>Estimated Cost:</strong> $${estimatedCost.toFixed(2)}</p>
+        <img src="${car.image}" alt="${car.type}" class="car-image" />
+        <p>Thank you for choosing QuickRide Rentals!</p>
+      `;
+
+      document.getElementById("summary").innerHTML = summaryHTML;
     }
-  ];
-
-  const container = document.getElementById('car-list');
-
-  cars.forEach((car, index) => {
-    const card = document.createElement('div');
-    card.className = 'car-card';
-    card.innerHTML = `
-      <img src="${car.image}" alt="${car.name}">
-      <h3>${car.name}</h3>
-      <p>Price per day: $${car.pricePerDay}</p>
-      <label>From: <input type="date" id="from-${index}"></label>
-      <label>To: <input type="date" id="to-${index}"></label>
-      <button onclick="bookCar(${index})">Book Now</button>
-      <div class="price-output" id="price-${index}"></div>
-    `;
-    container.appendChild(card);
-  });
-
-  function bookCar(index) {
-    const fromDate = new Date(document.getElementById(`from-${index}`).value);
-    const toDate = new Date(document.getElementById(`to-${index}`).value);
-    const output = document.getElementById(`price-${index}`);
-
-    if (isNaN(fromDate) || isNaN(toDate)) {
-      output.innerHTML = "❌ Please select valid dates.";
-      return;
-    }
-
-    if (toDate < fromDate) {
-      output.innerHTML = "❌ End date must be after start date.";
-      return;
-    }
-
-    const timeDiff = toDate - fromDate;
-    const days = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)) + 1; // include both start and end dates
-
-    const total = days * cars[index].pricePerDay;
-    output.innerHTML = `✅ Booked for ${days} days. Total: $${total}`;
-  }
